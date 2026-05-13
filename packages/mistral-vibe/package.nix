@@ -211,6 +211,7 @@ python.pkgs.buildPythonApplication rec {
   # requirements (see issue #3668) and are satisfied by the overrides above.
   pythonRelaxDeps = [
     "agent-client-protocol"
+    "certifi"
     "cryptography"
     "gitpython"
     "giturlparse"
