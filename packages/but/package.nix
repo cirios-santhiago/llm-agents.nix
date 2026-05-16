@@ -4,6 +4,7 @@
   rustPlatform,
   fetchFromGitHub,
   pkg-config,
+  unpinCargoMsrvHook,
   openssl,
   sqlite,
   zstd,
@@ -30,7 +31,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
     rm -f rust-toolchain.toml
   '';
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    unpinCargoMsrvHook
+  ];
 
   buildInputs = [
     openssl
