@@ -53,13 +53,13 @@ in
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "gitbutler";
-  version = "0.19.12";
+  version = "0.19.13";
 
   src = fetchFromGitHub {
     owner = "gitbutlerapp";
     repo = "gitbutler";
     tag = "release/${finalAttrs.version}";
-    hash = "sha256-MIrr/HeUIHdf8DtMMjEsZI6ZdDsZochBWanddncEa+o=";
+    hash = "sha256-1AHZB/vf0XmQfG25qMqiX0ZRlFQQZp4dSSVnw5G5tts=";
   };
 
   # Pin the user-facing version into the Tauri release config and disable the
@@ -78,13 +78,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   '';
 
-  cargoHash = "sha256-CxjZeIzrQuRXGc6FKt3dDhsR7MwO1un75A7D5GqVdCI=";
+  cargoHash = "sha256-PoPqb8ugWjAHw+IhrwIFBTQY/06BatxbZdA0yqIr7Gc=";
 
   pnpmDeps = fetchPnpmDeps {
     inherit (finalAttrs) pname version src;
     inherit pnpm;
     fetcherVersion = 2;
-    hash = "sha256-xH+6f3dGwpUFOFRgAmebZEWpz5ep2upPSbsEqekw/74=";
+    hash = "sha256-ODWwS8zszq890nRCxEjE9/i9nmNZfIkKZ/Ag9Fka/PA=";
   };
 
   nativeBuildInputs = [
