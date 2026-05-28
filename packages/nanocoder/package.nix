@@ -10,13 +10,13 @@
 
 buildNpmPackage rec {
   pname = "nanocoder";
-  version = "1.26.1";
+  version = "1.27.0";
 
   src = fetchFromGitHub {
     owner = "Mote-Software";
     repo = "nanocoder";
     rev = "v${version}";
-    hash = "sha256-vlBnLYfiUG0adKY6LpecSvixGToOw0gqb84rtx1gIDs=";
+    hash = "sha256-YlFDjuOEPBYbLhb7Ipb4fAO65a4PoICCv3azRMJcztw=";
     postFetch = ''
       rm -f $out/pnpm-workspace.yaml
     '';
@@ -27,7 +27,7 @@ buildNpmPackage rec {
     inherit pname version src;
     inherit pnpm;
     fetcherVersion = 3;
-    hash = "sha256-WCZVZcq8SymmBFShuGBeXNiBRIB+BIhG3u78Vy4Zby0=";
+    hash = "sha256-n3PC1HYUbd6awcD7sIq5TE2US7mJzaFWjbpHZDy99Ao=";
     # Upstream lockfile has stale patchedDependencies not in package.json
     postPatch = ''
       sed -i '/^patchedDependencies:/,/^$/d' pnpm-lock.yaml
