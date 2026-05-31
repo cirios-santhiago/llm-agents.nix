@@ -1,5 +1,6 @@
 {
   lib,
+  flake,
   buildGoModule,
   fetchFromGitHub,
   go-bin,
@@ -9,16 +10,16 @@
 
 buildGoModule.override { go = go-bin; } rec {
   pname = "mardi-gras";
-  version = "0.17.0";
+  version = "0.22.0";
 
   src = fetchFromGitHub {
     owner = "quietpublish";
     repo = "mardi-gras";
     rev = "v${version}";
-    hash = "sha256-zBrUOVcuAOeVQsm3TdBREkJwJgd2BR/5pKXUROtDab0=";
+    hash = "sha256-JBiig+kI2X6SZhEb5mAiacLiMI5nIU0klWlBCBFshMo=";
   };
 
-  vendorHash = "sha256-CbftluOGy00UtbStnH544kLAI63lC5rL3BZUp+Gf5Bc=";
+  vendorHash = "sha256-FuXR6Cq+BLJ7h5UqFEDJ/BVlWIUpye7GOpiqbhjv6aM=";
 
   subPackages = [ "cmd/mg" ];
 
@@ -43,7 +44,7 @@ buildGoModule.override { go = go-bin; } rec {
     changelog = "https://github.com/quietpublish/mardi-gras/releases/tag/v${version}";
     license = licenses.mit;
     sourceProvenance = with sourceTypes; [ fromSource ];
-    maintainers = with maintainers; [ zimbatm ];
+    maintainers = with flake.lib.maintainers; [ smdex ];
     mainProgram = "mg";
     platforms = platforms.unix;
   };
