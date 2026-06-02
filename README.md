@@ -120,14 +120,14 @@ Nix packages for AI coding agents and development tools. Automatically updated d
 
 </details>
 <details>
-<summary><strong>forge</strong> - AI-Enhanced Terminal Development Environment - A comprehensive coding agent that integrates AI capabilities with your development environment</summary>
+<summary><strong>forgecode</strong> - AI-Enhanced Terminal Development Environment - A comprehensive coding agent that integrates AI capabilities with your development environment</summary>
 
 - **Source**: binary
 - **License**: MIT
-- **Homepage**: https://github.com/antinomyhq/forge
-- **Usage**: `nix run github:numtide/llm-agents.nix#forge -- --help`
-- **Nix**: [packages/forge/package.nix](packages/forge/package.nix)
-- **Documentation**: See [packages/forge/README.md](packages/forge/README.md) for detailed usage
+- **Homepage**: https://github.com/tailcallhq/forgecode
+- **Usage**: `nix run github:numtide/llm-agents.nix#forgecode -- --help`
+- **Nix**: [packages/forgecode/package.nix](packages/forgecode/package.nix)
+- **Documentation**: See [packages/forgecode/README.md](packages/forgecode/README.md) for detailed usage
 
 </details>
 <details>
